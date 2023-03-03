@@ -1,0 +1,729 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.paginacao{
+	margin:20px 0;
+	text-align: center;
+}
+
+.paginacao a{
+	font-size: 14px;
+	margin:0 8px;
+	display: inline-block;
+	padding: 3px 4px;
+	border: 1px solid #ccc;
+	text-decoration: none;
+	color: #666;
+}
+
+.paginacao a.page-selected{
+	background: rgb(220,220,220);
+}
+
+
+.sucesso{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 15px 2%;
+	text-align: center;
+	color: white;
+	z-index: 999;
+	color: #3c763d;
+	font-weight: bold;
+	font-size: 14px;
+	background: #DFF2BF;
+}
+
+.overlay-loading{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: rgba(0,0,0,0.4);
+}
+
+.overlay-loading img{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+  
+:target {
+    scroll-margin-top: .8em;
+  }
+
+
+.center{
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+header{
+    width: 100%;
+    max-width: 100%;
+}
+
+.logo{
+    padding: 30px 20px;
+    width: 50%;
+    float: left;
+}
+
+.logo a{
+    color: #b71c1c;
+    text-decoration: none;
+    font-size:32px;
+}
+
+nav.menu-desktop{
+    float: right;
+    padding: 40px 20px;
+   
+}
+
+nav.menu-desktop li{
+    display: inline-block;
+    margin: 0 12px;
+
+}
+
+nav.menu-desktop a{
+    color: #b71c1c;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav.menu-desktop a:hover{
+    border-bottom: 2px solid black;
+}
+
+nav.mobile{
+    display: none;
+}
+
+
+section.banner{
+    overflow:hidden;
+	width: 100%;
+	height: 500px;
+	background-color: black;
+	background-image: url('../imagens/carro2.jpg');
+	background-size: cover;
+   background-position: center;
+	background-repeat: no-repeat;
+}
+
+.texto-destaque-banner{
+    padding: 60px 2%;
+
+}
+
+.texto-destaque-banner h2{
+    color: #b71c1c;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.texto-destaque-banner a{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 25px;
+    background: white;
+    color: #b71c1c;
+    padding: 10px 2%;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+section.sessao-destaques{
+    padding: 60px 10px;
+    text-align: center;
+}
+
+section.sessao-destaques h2{
+    color: #b71c1c;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+
+.destaque-vendas{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 5%;
+}
+
+.img-destaque{
+    width: 50%;
+    margin-top: 50px;
+}
+
+.img-destaque img{
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+}
+
+.texto-destaque{
+    width: 50%;
+   padding: 0 10px;
+   margin-top: 50px;
+}
+
+.texto-destaque h3{
+    color: #e65100;
+    font-size: 25px;
+}
+
+.texto-destaque p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+
+section.carros-destaques{
+	padding: 50px 0;
+    background-color: #e0e0e0;
+	
+}
+
+section.carros-destaques h2{
+    color: #b71c1c;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+}
+
+.carros-box{
+	margin:10px auto;
+	
+	overflow: hidden;
+	width: 100%;
+	display: block;
+}
+.carro-destaque-single{width: 100%;display: inline-block;}
+.carro-destaque-single p{text-align: center;margin-bottom: 20px;color: #d32f2f;font-size: 25px;}
+.carro-destaque-single img{
+	width: 400px;
+	height: 200px;
+	display: block;
+	margin-top: 60px;
+    margin: 10px auto;
+	
+}
+
+
+.button a.visualizar{
+    display: block;
+    color: white;
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 15px 5%;
+    text-decoration: none;
+    background-color: #d32f2f;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.button a.whatsapp{
+    display: block;
+    color: white;
+    width: 50%;
+    float: right;
+    text-align: center;
+    padding: 15px 5%;
+    text-decoration: none;
+    background-color:#66bb6a;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+section.sessao-carros{
+    padding: 60px 10px;
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+section.sessao-carros > h3{
+    text-align: center;
+    font-size: 30px;
+    display: inline-block;
+    color: black;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+section.sessao-carros >.center{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.veiculos-loja{
+    width: 33.3%;
+    padding: 0 10px;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.veiculos-loja img{
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+   
+}
+
+.veiculos-loja h3{
+    color: #d32f2f;
+    font-size: 22px;
+    margin-top: 12px;
+}
+
+.veiculos-loja p{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.veiculos-loja a{
+    color: white;
+    display: inline-block;
+    background-color: #373855;
+    text-decoration: none;
+    margin-top: 12px;
+    width: 200px;
+    font-size: 20px;
+    padding: 8px; 
+}
+
+.form-pesquisar{
+    margin-top: 40px;
+    width: 35%;
+	border:2px solid #ccc;
+    min-height: 150px;
+}
+
+.form-pesquisar h2{
+    color: #e65100;
+    font-size: 22px;
+    margin-top:10px;
+    text-align: center;
+    
+}
+
+.form-pesquisar form input[type=text]{
+    width: 450px;
+    padding-left: 10px;
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.form-pesquisar input[type=submit]{
+    display: block;
+    width: 150px;
+    padding: 6px 3px;
+    cursor: pointer;
+    background-color: #b71c1c;
+    color: white;
+    border: 0;
+    font-size: 16px;
+    margin-left: 12px;
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.slick-slide {
+    margin-left:27px;
+
+  }
+
+  /* the parent */
+  .slick-list {
+    margin-left:-27px;
+   
+  }
+
+/****SLICK SLIDER1****/
+
+.slick-dotted ul{
+    display: block;
+	list-style-type: none;
+	text-align: center;
+	position: relative;
+	top:30px;
+}
+
+.slick-dotted li{
+	display: inline-block;
+	margin: 0 7px;
+}
+
+.slick-dotted button:focus{
+	outline: 0;
+}
+
+.slick-dotted li button{
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	color: #d8d8d8;
+	border-width: 0;
+	background: #d8d8d8;
+	opacity: 1;
+	cursor: pointer;
+}
+
+li.slick-active button{
+	background: #373855;
+	color: #373855;
+}
+.slick-slide:focus { outline: none; }
+
+
+section.contato{
+    padding: 50px 10%;
+}
+
+section.contato >.center{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-contato{
+    width: 45%;
+    margin-left: 5%;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+.form-contato h2{
+    color: #e65100;
+    font-size: 25px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.form-contato form input[type=text]{
+    width: 100%;
+    border-radius: 25px;
+    padding-left: 9px;
+    height: 40px;
+    border: 2px solid #d32f2f;
+    margin-bottom: 20px;
+    font-size: 19px;
+    margin-top: 30px;
+}
+
+.form-contato form input[type=number]{
+    width: 100%;
+    border-radius: 25px;
+    padding-left: 9px;
+    height: 40px;
+    border: 2px solid #d32f2f;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.form-contato form input[type=email]{
+    width: 100%;
+    border-radius: 25px;
+    padding-left: 9px;
+    height: 40px;
+    border: 2px solid #d32f2f;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.form-contato form textarea{
+    width: 100%;
+    border-radius: 15px;
+    padding-left: 10px ;
+    height: 60px;
+    resize: vertical;
+    border: 2px solid #d32f2f;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.form-contato form input[type=submit]{
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    width: 250px;
+    text-transform: uppercase;
+    font-size: 19px;
+    padding: 12px 2px;
+    border: 0;
+    text-align: center;
+    background-color: #373855;
+    margin-top: 15px;
+}
+
+
+.map{
+    width: 50%;
+}
+
+
+section.depoimentos{
+	padding: 50px 0;
+	background-color: #373855;
+}
+
+section.depoimentos h2{
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 30px;
+}
+
+.depoimentos-box{
+	margin:10px auto;
+	max-width: 800px;
+	overflow: hidden;
+	width: 100%;
+	display: block;
+}
+.depoimento-single{width: 100%;display: inline-block;}
+.depoimento-single p{text-align: center;margin-bottom: 15px;color: white;font-weight: bold;}
+.depoimento-single img{
+	width: 70px;
+	height: 70px;
+	display: block;
+	margin: 10px auto;
+	border-radius: 50%;
+}
+
+
+section.carro-single{
+    padding: 40px;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+
+
+.descricao-carro{
+    width: 50%;
+    padding: 20px 20px;
+    background-color: #fafafa;
+    float: left;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.descricao-carro h2{
+    color: #b71c1c;
+    font-size: 25px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.descricao-carro p{
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height:1.8;
+}
+
+.descricao-carro p.preco{
+    margin-top: 20px;
+    color: white;
+    font-size: 22px;
+    background-color: #d32f2f;
+    border-radius: 25px;
+}
+
+.descricao-carro a.whatsapp{
+    margin-top: 20px;
+    color: white;
+    display: block;
+    padding: 8px ;
+    text-decoration: none;
+    font-size: 22px;
+    background-color: #66bb6a;
+    border-radius: 25px;
+}
+
+
+.img-carro{
+    width: 50%;
+   padding: 20px 10px;
+   float: left;
+}
+
+.img-carro img{
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+}
+
+section.imagens-carro-interno{
+    padding: 40px 5%;
+    text-align: center;
+}
+
+section.imagens-carro-interno >.center{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.imagens-carro-interno h2{
+    color: #b71c1c;
+    font-size: 36px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.carro-imagens{
+    width: 33.3%;
+    padding: 0 12px;
+    margin-top: 40px;
+}
+
+.carro-imagens img{
+   width: 100%;
+   max-width: 100%;
+   height: 200px;
+}
+
+footer{
+    padding: 30px;
+    text-align: center;
+}
+
+footer h2{
+    color: #b71c1c;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+footer a{
+    display: block;
+    color: #373855;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+footer p{
+    margin-top: 16px;
+    font-size: 23px;
+    color: #b71c1c;
+}
+
+@media screen and (max-width:768px){
+    .logo a{
+        color: #b71c1c;
+    }
+    nav.menu-desktop{
+      display: none;
+   }
+   nav.mobile{
+    display: block;
+    
+}
+nav.mobile h3{
+    cursor: pointer;
+    font-size: 34px;
+    position: relative;
+    float: right;
+    top: 40px;
+    position: relative;
+    margin-right: 10px;
+    color: black;
+}
+nav.mobile ul{
+    top:70px;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+nav.mobile li{
+    font-weight: 300;
+    width: 100%;
+    display: block;
+    background: black;
+    border-bottom:1px solid white;
+    font-size: 17px;
+    padding:8px 0;
+}
+nav.mobile a{
+    display: block;
+    text-decoration: none;
+    color:#b71c1c;
+    text-transform: uppercase;
+}
+.destaque-vendas,.texto-destaque,.img-destaque{
+    width: 100%;
+}
+.destaque-carro{
+    width: 100%;
+}
+.button a.visualizar{
+   width: 100%;
+}
+.button a.whatsapp{
+    width: 100%;
+}
+.form-contato,.map{
+    width: 100%;
+}
+.form-pesquisar{
+    width: 100%;
+    max-width: 700px;
+}
+.veiculos-loja{
+    width: 100%;
+}
+.img-carro,.descricao-carro{
+    width: 100%;
+}
+
+.carro-imagens{
+    width: 100%;
+}
+}
