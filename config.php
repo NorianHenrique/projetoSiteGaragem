@@ -36,7 +36,7 @@
 
 
 	//Constantes para o painel de controle
-	define("NOME_EMPRESA","NADSistemas");
+	define("NOME_EMPRESA","");
 
 	//Funções do painel
 	function pegaCargo($indice){
