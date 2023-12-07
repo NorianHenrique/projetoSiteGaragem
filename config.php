@@ -33,10 +33,6 @@
 	define("DATABASE","garagem_turbo");
 
    
-	////define("USER","nadsis92_root");
-	//define("PASSWORD","Maximumcoop45@");
-	//define("DATABASE","nadsis92_nadsistemas");
-
 
 
 	//Constantes para o painel de controle
